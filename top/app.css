@@ -1,0 +1,145 @@
+/*--------------------------\*
+	BASE
+\*--------------------------*/
+html,body{
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 1.4;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.container{
+	margin: 0 20px;
+}
+.site-content{
+	padding-top: 66px;
+}
+
+/*--------------------------\*
+	HEADER
+\*--------------------------*/
+.header{
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 66px;
+	line-height: 66px;
+	color: #fff;
+	background: #2e7d32;
+}
+.header__logo{
+	font-weight: bold;
+	padding: 0 25px;
+	float: left;
+}
+
+/*--------------------------\*
+	MENU
+\*--------------------------*/
+.menu{
+	float: left;
+}
+
+.menu a{
+	padding: 0 10px;
+}
+.menu a:hover{
+	color: #c6ff00;
+}
+/*==================================
+=            Responsive            =
+==================================*/
+
+@media only screen and (max-width: 750px){
+	.site-pusher,.site-container {
+		height: 100%;
+	}
+	.site-container{
+		overflow: hidden;
+	}
+	.site-pusher{
+		transition:0.3s;
+		transform:translateX(0px);
+	}
+	.site-content{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		padding-top: 0;
+		overflow-y:scroll; 
+		-webkit-overflow-scrolling:touch;
+		background-color: #fff;
+	}
+	.header{
+		position: static;
+	}
+	.header__icon{
+		position: relative;
+		display: block;
+		float: left;
+		width: 50px;
+		height: 66px;
+		cursor: pointer;
+	}
+	.header__icon:after{
+		content: '';
+		position: absolute;
+		display: block;
+		width: 1rem;
+		height: 0;
+		top: 16px;
+		left: 15px;
+		box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
+	}
+	.menu{
+		position: absolute;
+		left: 0;
+		top:66px;
+		bottom: 0;
+		width: 250px;
+		/*display: none;*/
+		background-color: #317C35;
+		/*transform: translateX(-250px);*/
+		/*transition:.3s;*/
+	}
+
+	.menu a{
+		display: block;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		border-bottom: 1px solid black;
+	}
+	.menuaa {
+		transform:translateX(250px);
+
+	}
+	.site-cache{
+		/*display: none;*/
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.6);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
